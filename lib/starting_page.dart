@@ -13,16 +13,16 @@ class StartingPage extends StatefulWidget {
 }
 
 class _StartingPageState extends State<StartingPage> {
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   Timer(const Duration(seconds: 2), () {
-  //     Navigator.pushReplacement(
-  //       context,
-  //       MaterialPageRoute(builder: (context) => LoginScreen()),
-  //     );
-  //   });
-  // }
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 2), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => LoginScreen()),
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,10 +49,10 @@ class _StartingPageState extends State<StartingPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Flexible(
-                child: FullScreenWidget(
+                child: FullScreenPage(
                   child: Image.asset(
                     'assets/StartingScreen.png',
-                    // fit: BoxFit.contain,
+                    // fit: BoxFit.cover,
                     // height: MediaQuery.of(context).size.height,
                     // width: MediaQuery.of(context).size.width,
                   ),
