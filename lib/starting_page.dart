@@ -32,16 +32,13 @@ class _StartingPageState extends State<StartingPage> {
           width: double.infinity,
           decoration: BoxDecoration(
             gradient: const LinearGradient(
-              colors: [
-                Color.fromARGB(255, 47, 212, 168),
-                Color.fromARGB(255, 66, 221, 180)
-              ],
+              colors: [Color.fromRGBO(10, 171, 152, 8), Colors.white],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.green.withOpacity(0.5),
+                color: Colors.white.withOpacity(0.5),
                 spreadRadius: 2,
                 blurRadius: 5,
                 offset: const Offset(10, 10),
@@ -51,17 +48,18 @@ class _StartingPageState extends State<StartingPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                width: 400,
-                height: 350,
-                child: Image.asset(
-                  'assets/Screen.png',
-                  fit: BoxFit.contain,
-                  height: double.infinity,
+              Flexible(
+                child: SizedBox(
                   width: double.infinity,
+                  height: double.infinity,
+                  child: Image.asset(
+                    'assets/StartingScreen.png',
+                    fit: BoxFit.contain,
+                    height: MediaQuery.of(context).size.height,
+                    width: MediaQuery.of(context).size.width,
+                  ),
                 ),
               ),
-              const SizedBox(height: 30),
             ],
           ),
         ),

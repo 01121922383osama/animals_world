@@ -108,15 +108,20 @@ class LoginScreen extends StatelessWidget {
               // google + apple sign in buttons
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
+                children: [
                   // face button
-                  SquareTile(imagePath: 'assets/face.png'),
-                  SizedBox(width: 25),
+                  const SquareTile(imagePath: 'assets/face.png'),
+                  const SizedBox(width: 25),
                   // google button
 
                   Padding(
-                    padding: EdgeInsets.all(2),
-                    child: SquareTile(imagePath: 'assets/google.png'),
+                    padding: const EdgeInsets.all(2),
+                    child: GestureDetector(
+                      onTap: () {
+                        print('============');
+                      },
+                      child: const SquareTile(imagePath: 'assets/google.png'),
+                    ),
                   ),
                 ],
               ),

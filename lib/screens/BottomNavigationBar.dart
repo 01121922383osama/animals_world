@@ -15,21 +15,21 @@ class MyBottomNavigationBar extends StatefulWidget {
 class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   int _currentIndex = 0;
   final screens = [
-  const  HomeButtom(),
-const    ButtomPharmacy(),
-  const  Center(
+    const HomeButtom(),
+    const ButtomPharmacy(),
+    const Center(
       child: Text(
         'Bag',
         style: TextStyle(fontSize: 60),
       ),
     ),
-  const  Center(
+    const Center(
       child: Text(
         'Chat',
         style: TextStyle(fontSize: 60),
       ),
     ),
-  const  Center(
+    const Center(
       child: Text(
         'Person',
         style: TextStyle(fontSize: 60),
@@ -51,10 +51,10 @@ const    ButtomPharmacy(),
           showUnselectedLabels: false,
           selectedFontSize: 15,
           unselectedFontSize: 10,
-          unselectedItemColor: Colors.grey,
+          unselectedItemColor: const Color(0xF1F1F1F1),
           selectedItemColor: Colors.white,
           type: BottomNavigationBarType.fixed,
-          backgroundColor: const Color(0xFF1DE9B6),
+          backgroundColor: const Color.fromRGBO(10, 171, 152, 1),
           currentIndex: _currentIndex,
           onTap: (index) {
             setState(() {

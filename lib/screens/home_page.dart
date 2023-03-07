@@ -59,6 +59,7 @@ class _HomePageState extends State<HomePage> {
             Container(
               width: double.infinity,
               height: 200,
+              // the color of the profile.
               decoration: const BoxDecoration(color: Color(0xFF00BFA5)),
               child: DrawerHeader(
                 child: Column(
@@ -67,7 +68,8 @@ class _HomePageState extends State<HomePage> {
                     CircleAvatar(
                       backgroundImage: AssetImage('assets/bird.png'),
                       radius: 50,
-                      backgroundColor: Color(0xFF00BFA5),
+                      // the color of the home,favorite,and so on.
+                      backgroundColor: Color.fromRGBO(10, 171, 152, 1),
                     ),
                     SizedBox(height: 10),
                     Text(
@@ -107,7 +109,7 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               leading: const Icon(Icons.add_alert),
               title: const Text(
-                'Notication',
+                'Notification',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -129,7 +131,7 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               leading: const Icon(Icons.send_to_mobile_rounded),
               title: const Text(
-                'Sighn Out',
+                'Sign Out',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
