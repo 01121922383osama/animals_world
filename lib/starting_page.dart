@@ -1,7 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api
 
 import 'dart:async';
-
+import 'package:full_screen_image_null_safe/full_screen_image_null_safe.dart';
 import 'package:animals_world/screens/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,16 +13,16 @@ class StartingPage extends StatefulWidget {
 }
 
 class _StartingPageState extends State<StartingPage> {
-  @override
-  void initState() {
-    super.initState();
-    Timer(const Duration(seconds: 2), () {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (context) => LoginScreen()),
-      );
-    });
-  }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   Timer(const Duration(seconds: 2), () {
+  //     Navigator.pushReplacement(
+  //       context,
+  //       MaterialPageRoute(builder: (context) => LoginScreen()),
+  //     );
+  //   });
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -49,14 +49,12 @@ class _StartingPageState extends State<StartingPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Flexible(
-                child: SizedBox(
-                  width: double.infinity,
-                  height: double.infinity,
+                child: FullScreenWidget(
                   child: Image.asset(
                     'assets/StartingScreen.png',
-                    fit: BoxFit.contain,
-                    height: MediaQuery.of(context).size.height,
-                    width: MediaQuery.of(context).size.width,
+                    // fit: BoxFit.contain,
+                    // height: MediaQuery.of(context).size.height,
+                    // width: MediaQuery.of(context).size.width,
                   ),
                 ),
               ),
