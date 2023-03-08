@@ -1,4 +1,4 @@
-// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: library_private_types_in_public_api, sized_box_for_whitespace
 
 import 'dart:async';
 import 'package:full_screen_image_null_safe/full_screen_image_null_safe.dart';
