@@ -45,20 +45,15 @@ class _StartingPageState extends State<StartingPage> {
               ),
             ],
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Flexible(
-                child: FullScreenPage(
-                  child: Image.asset(
-                    'assets/StartingScreen.png',
-                    // fit: BoxFit.cover,
-                    // height: MediaQuery.of(context).size.height,
-                    // width: MediaQuery.of(context).size.width,
-                  ),
-                ),
-              ),
-            ],
+          child: Container(
+            width: double.infinity,
+            height: double.infinity,
+            child: Image.asset(
+              'assets/StartingScreen.png',
+              fit: BoxFit.cover,
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+            ),
           ),
         ),
       ),
